@@ -1,66 +1,41 @@
-<!doctype html>
-<Html>
-<head> 
-</script>
-    </head>
-    <body>
-    <form name="myForm">
-<title>
-Registration Page
-</title>
+
+
+
+                    <!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form to Google Sheet</title>
 </head>
-<body bgcolor="Lightskyblue">
-<br>
-<br>
-<form>
-
-<label> Name </label>       
-<input type="text" name="firstname" size="15"/> <br> <br>
-<label> Father name</label>   
-<input type="text" name="Father name" size="15"/> <br> <br>
-<label> Mother name</label>       
-<input type="text" name="Mother name" size="15"/> <br> <br>
-<label>D.O.B</label>       
-<input type="text" name="dob" size="15"/> <br> <br>
-<label> Height</label>       
-<input type="text" name="Height" size="15"/> <br> <br>
-<label> Religion</label>       
-<input type="text" name="Religion" size="15"/> <br> <br>
-<label> Education</label>       
-<input type="text" name="Education" size="15"/> <br> <br>
-
-<label> 
-Course :
-</label> 
-<select>
-<option value="Colours">Colours</option>
-<option value="Black">Black</option>
-<option value="Red">Red</option>
-<option value="Fushia">Fushia</option>
-<option value="Silver">Silver</option>
-<option value="Maroon">Maroon</option>
-<option value="Aqua">Aqua</option>
-</select>
-
-<br>
-<br>
-<label> 
-Gender :
-</label><br>
-<input type="radio" name="male"/> Male <br>
-<input type="radio" name="female"/> Female <br>
-<br>
-<br>
-
-<label> 
-Phone :
-</label>
-<input type="text" name="country code"  value="+91" size="2"/> 
-<input type="text" name="phone" size="10"/> <br> <br>
-
-
-      
-    <input type=SUBMIT value="Click to Submit" name="mySubmit"
-             onClick="openWin()">
+ 
+<body>
+    <h1 id="msg"></h1>
+    <form>
+        <input type="text" name="name" placeholder='Name'><br><br>
+        <input type="email" name="email" placeholder='Email'><br><br>
+        <input type="tel" name="phone" placeholder='Phone'><br><br>
+        <input type="submit" id="sub">
     </form>
-   
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.querySelector("#sub").value = "Submiting..";
+            let data = new FormData(form);
+            fetch('Paste_Your_Api_EndPoint_Url', {
+                    method: "POST",
+                    body: data
+                })
+                .then(res => res.text())
+                .then(data => {
+                    document.querySelector("#msg").innerHTML = data;
+                    document.querySelector("#sub").value = "Submit"
+                });
+        })
+    </script>
+</body>
+ 
+</html>

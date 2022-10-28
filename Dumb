@@ -1,66 +1,56 @@
-<!doctype html>
-<Html>
+<!DOCTYPE html>
+<html lang="en">
 <head> 
+<title>Hello, world!</title>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
+  <meta name="description" content="" /> 
+  </head>
+  <body> 
+
+<body>
+<head>
+    <title>Avatar Creation</title>
+    <style> 
+        img.avatar{
+        height:40px;
+        width:40px;
+        border-radius:100%;
+        vertical-align: middle;
+        }
+        
+    </style>    
+         <img class="avatar"
+            src="content://media/external/downloads/12780">
+           
+    </body>
+    
+    <style>
+    body {
+        background-color: powderblue;
+    }
+  </style>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>🃏
+  <br>
+  <br>
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.overlays = a2a_config.overlays || [];
+a2a_config.overlays.push({
+    services: ['whatsapp', 'facebook', 'instagram', 'telegram'],
+    size: '50',
+    style: 'vertical',
+    position: 'top right ',
+});
 </script>
-    </head>
-    <body>
-    <form name="myForm">
-<title>
-Registration Page
-</title>
-</head>
-<body bgcolor="Lightskyblue">
-<br>
-<br>
-<form>
 
-<label> Name </label>       
-<input type="text" name="firstname" size="15"/> <br> <br>
-<label> Father name</label>   
-<input type="text" name="Father name" size="15"/> <br> <br>
-<label> Mother name</label>       
-<input type="text" name="Mother name" size="15"/> <br> <br>
-<label>D.O.B</label>       
-<input type="text" name="dob" size="15"/> <br> <br>
-<label> Height</label>       
-<input type="text" name="Height" size="15"/> <br> <br>
-<label> Religion</label>       
-<input type="text" name="Religion" size="15"/> <br> <br>
-<label> Education</label>       
-<input type="text" name="Education" size="15"/> <br> <br>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 
-<label> 
-Course :
-</label> 
-<select>
-<option value="Colours">Colours</option>
-<option value="Black">Black</option>
-<option value="Red">Red</option>
-<option value="Fushia">Fushia</option>
-<option value="Silver">Silver</option>
-<option value="Maroon">Maroon</option>
-<option value="Aqua">Aqua</option>
-</select>
+<img src="https://static.addtoany.com/images/dracaena-cinnabari.jpg" height="200" width="200" alt="Dracaena cinnabari">
 
-<br>
-<br>
-<label> 
-Gender :
-</label><br>
-<input type="radio" name="male"/> Male <br>
-<input type="radio" name="female"/> Female <br>
-<br>
-<br>
-
-<label> 
-Phone :
-</label>
-<input type="text" name="country code"  value="+91" size="2"/> 
-<input type="text" name="phone" size="10"/> <br> <br>
-
-
-      
-    <input type=SUBMIT value="Click to Submit" name="mySubmit"
-             onClick="openWin()">
-    </form>
-   
+</body>
+</html>
